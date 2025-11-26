@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Форма</title>
+    <title>Заказать</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -20,96 +20,119 @@
 
         <header class="card card-header" style="background-image: url(./images/background.jpg);">
             <div class="card-body">
-                <h3 class="card-title text-center">Live server<br>HTML CSS Support</h3>
+                <h1 class="card-title text-center my-custom-color">Магазин бабочек<br>Buttershop</h1>
             </div>
         </header>
 
         <div class="card">
             <div class="card-body">
                 <ul class="nav nav-tabs">
-                    <li class="nav-item"> <a class="nav-link " href="./index.html">Первая страница</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="./shop.html">Магазин</a></li>
-                    <li class="nav-item"> <a class="nav-link active" href="./form.html">Форма</a></li>
+                    <li class="nav-item"> <a class="nav-link " href="01.html">О магазине</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="02.html">Каталог бабочек</a></li>
+                    <li class="nav-item"> <a class="nav-link active" href="03.html">Заказать</a></li>
                 </ul>
             </div>
 
 
-            <div class="card-body"><!--начало уникального содержания-->
-                <h5 class='card-title text-center' id='top_of _page'>Пример формы</h5>
-                <!-- <form action="https://httpbin.org/post" method='post' target="_blank"> -->
-                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+            <div class="card-body">
+                <h2 class='card-title text-center' id='top_of _page'>Заказать бабочку</h2>
+
+                <form action="https://www.google.com/search?" id="UserEnter" name="UserEnter" target="_blank">
                     <input type="hidden" name="q" value="search">
-                    <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Example label</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput"
-                            placeholder="Example input placeholder" name="var_01" value="01">
-                    </div>
-                    <div class="mb-3">
-                        <label for="formGroupExampleInput2" class="form-label">Another label</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                            placeholder="Another input placeholder" name="var_02" value="02">
-                    </div>
-
-
-
+                
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <label for="name" class="form-label">ФИО</label>
+                            <input type="email" class="form-control" id="name" placeholder="Киркоров Филипп Бедросович">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="text" class="form-control" id="phoneNumber" placeholder="8(800) 555-35-35">
                         </div>
-                        <div class="col-12">
-                            <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2"
-                                placeholder="Apartment, studio, or floor">
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Адрес доставки</label>
+                            <input type="text" class="form-control" id="address" placeholder="г. Москва, ул. Ленина, д. 34, кв. 5">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <label for="mail" class="form-label">Почта</label>
+                            <input type="text" class="form-control" id="email"
+                                placeholder="smesharik@gmail.ru">
                         </div>
-                        <div class="col-md-4">
-                            <label for="inputState" class="form-label">State</label>
-                            <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                        
+                        <div class="col-md-3">
+                            <label for="butterfly" class="form-label">Вид бабочки</label>
+                            <select id="butterfly" class="form-select">
+                                <option selected>Морфо</option>
+                                <option>Тройдес</option>
+                                <option>Румянцева</option>
+                                <option>Леви</option>
+                                <option>Идея</option>
+                                <option>Лова</option>
+                                <option>Данаида</option>
+                                <option>Коцебу</option>
+                                <option>Полит</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
-                            <label for="inputZip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
+
+                        <div class="col-md-3">
+                            <label for="amount" class="form-label">Количество</label>
+                            <input type="number" class="form-control" id="amount"
+                                placeholder="1">
                         </div>
 
                         <div class="col-2">
+                            <label class="form-label">
+                                    Способ оплаты:
+                            </label>
+                            
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
                                 <label class="form-check-label" for="radioDefault1">
-                                    Default radio
+                                    Наличные
                                 </label>
                             </div>
-                        </div>
-                        <div class="col-2">
+
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
                                     checked>
                                 <label class="form-check-label" for="radioDefault2">
-                                    Default checked radio
+                                    Карта
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    СБП
                                 </label>
                             </div>
                         </div>
 
 
                         <div class="col-12">
+                            <label class="form-label">
+                                    Дополнительные товары:
+                            </label>
+
                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck" checked>
+                                <label class="form-check-label" for="gridCheck">
+                                    Домик для бабочки
+                                </label>
+                            </div>
+                        
+                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="gridCheck">
                                 <label class="form-check-label" for="gridCheck">
-                                    Check me out
+                                    Инструкция по уходу
+                                </label>
+                            </div>
+
+                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    Еда для бабочки
                                 </label>
                             </div>
                         </div>
@@ -120,13 +143,13 @@
                         <button type="submit" class="btn btn-primary">Отправить</button>
                     </div>
                 </form>
-            </div><!--окончание уникального содержания-->
+            </div>
 
         </div>
 
         <footer class="card card-footer">
             <div class="card-body">
-                <p>Footer </p>
+                <p>@Buttershop, 2025 </p>
             </div>
         </footer>
     </div>
